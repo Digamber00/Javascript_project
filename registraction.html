@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-image: url(./travel-items-assortment-top-view.jpg);
+           
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover; 
+        }
+         #l{
+            background-color: rgba(62, 62, 66, 0.386);
+            width: 300px;
+            height: 380px; 
+            text-align: center;
+             margin: auto; 
+             padding: 20px;
+             margin-top: 200px;
+            border-radius: 10%;
+            backdrop-filter: blur(10px);
+        }
+        input,#k5 {
+            height: 30px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="l">
+        <h1>Registration Page</h1>
+        <form action="">
+            <input type="text" placeholder="Name" id="k1" ><br><br>
+        <input type="text" placeholder="Email" id="k2" value=""><br><br>
+        <input type="password" placeholder="Password" id="k3" value=""><br><br>
+        <input type="password" placeholder="confirm password" id="k4" value=""><br><br>
+        <input type="submit" value="submit" id="k5"><br><br>
+        <span>Already have an account? <a href="./signpage.html">Sign in</a></span>
+        </form>
+        
+    </div>
+    <script>
+        btn=document.getElementById("k5")
+        
+        a=[]
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            int1=document.getElementById("k1").value
+            int2=document.getElementById("k2").value
+            int3=document.getElementById("k3").value
+            int4=document.getElementById("k4").value
+            if(int3!==int4){
+                alert("confirm password is doesn't matched")
+            }
+              
+            obj={
+                name:int1,
+                email:int2,
+                password:int3,
+                confirmpassword:int4
+                
+            }
+            a.push(obj)
+            console.log(a)
+             localStorage.setItem("ROHINI",JSON.stringify(a))
+             y=confirm("registration success to go to login page")
+             if(y ){
+                window.location.assign("./signpage.html")
+             }
+        })
+
+    </script>
+</body>
+</html>

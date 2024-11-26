@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            
+            background-image: url(./travel-concept-with-worldwide-landmarks.jpg);
+            margin-top: 50px;
+            height: 90vh;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;          
+        }
+        #l{
+            background-color: rgba(62, 62, 66, 0.386);
+            width: 300px;
+            height: 300px; 
+            text-align: center;
+             margin: auto; 
+             padding: 20px;
+             margin-top: 200px;
+            border-radius: 10%;
+            backdrop-filter: blur(10px);
+        }
+        input {
+            height: 30px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <div id="l">
+        <h1>sign in</h1>
+        <form action="">
+            <input type="email" placeholder="Email"  id="k1" required>
+            <br><br>
+            <input type="password" placeholder="password" id="k2">
+            <br><br>
+            <input type="submit" id="k3"><br><br>
+            <span>Not a member ? <a href="./registraction.html">Sign Up</a></span><br><br>
+            <SPan>Login as a <a href="./main.html">Guest</a></SPan>
+        </form>
+    </div>
+    
+    <script>
+      
+        
+        btn=document.getElementById("k3")
+       
+        btn.addEventListener("click",(e)=>{
+            e.preventDefault()
+            int1=document.getElementById("k1").value
+            int2=document.getElementById("k2").value
+            var data=localStorage.getItem("ROHINI")
+            var data1=JSON.parse(data)
+            for(i=0;i<data1.length;i++){
+
+                if(data1[i]["name"]==int1 && data1[i]["password"]==int2){
+                   y=confirm("login is successfull")
+                   if(y){
+                    window.location.assign("main.html")
+                   }
+
+                }
+                else{
+                    z=confirm("please registar")
+                    
+                    if(z){
+                        window.location.assign("registraction.html")
+                    }
+
+                }
+                break   
+            }
+        })
+    </script>
+</body>
+</html>

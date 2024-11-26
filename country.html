@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: #20124e;
+        }
+
+        #k {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            justify-content: space-evenly;
+            color: azure;
+            margin-top: 5%;
+            font-size: 25px;
+        }
+
+        #h1 {
+            margin-top: 5%;
+            color: azure;
+            align-items: center;
+            font-size: 40px;
+
+        }
+
+        #count1:active,
+        #count2:active,
+        #count3:active,
+        #count4:active {
+            text-decoration: underline;
+
+        }
+
+
+
+        #int1,
+        #int2,
+        #int3,
+        #int4,
+        #int5 {
+            width: 500px;
+            border: 2px solid azure;
+            height: 50px;
+            border-radius: 23px;
+            font-size: 20px;
+            background-color: #20124e;
+        }
+
+        ::placeholder {
+            color: azure;
+        }
+
+
+        #i {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            margin-top: 50px;
+
+            align-items: center;
+            width: 100%;
+        }
+
+        .a {
+            width: 100px;
+            border-radius: 20px;
+
+            height: 43px;
+            margin-right: 3px;
+            border: none;
+            background-color: rgb(214, 224, 220);
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+
+        }
+
+        #ka3 {
+            display: none;
+           
+            margin-top: 20px;
+            padding: 30px;
+
+
+        }
+
+        #ka4 {
+            display: none;
+         padding: 30px;
+        }
+        #countrydetails{
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        #country{
+            flex-direction:column;
+            display: flex;
+            align-content: center;
+            justify-content: center;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="h1" align="center">Where to ?</h1>
+    <div id="k">
+        <span id="count1">Find an Embasssy in Abroad</span>
+        <span id="count2">Country Details</span>
+        <span id="count3">Country Activities</span>
+        <span id="count4">Brife info About A Country</span>
+    </div>
+    <div id="i">
+        <div id="no1" style="display: none;">
+            <input type="text" placeholder="Country Activities" id="int1"><br><br>
+            <input type="text" name="" id="int5" placeholder="where to ?">
+            <input type="submit" name="" class="a" value="search">
+        </div>
+        <div id="no2" style="display: none;">
+            <input type="text" placeholder="Country Name" id="int2">
+            <button id="ka1" class="a">search</button>
+            <button id="ka2" class="a">clear</button>
+
+
+        </div>
+        <div id="no3" style="display: none;">
+            <input type="text" placeholder="Country Activities" id="int3">
+            <input type="submit" name="" class="a" value="search">
+        </div>
+        <div id="no4" style="display: none;">
+            <input type="text" placeholder="About A Country" id="int4">
+            <input type="submit" name="" class="a" value="search">
+        </div>
+    </div>
+
+
+
+
+    <!-- ------------------------------------------------------------------------------ -->
+
+    <div id="countrydetails" style="display: none;">
+        <div id="country" > <!-- <h1>Country details</h1> -->
+            <table id="ka3" align="center" style="background-color: rgb(174, 143, 132);">
+                <thead id="thead" style="background-color: black; color: azure;">
+                    <tr >
+                        <th>country</th>
+                        <th>Area</th>
+                        <th>region</th>
+                        <th>capital</th>
+                        <th>flag</th>
+                        <th>
+                            population
+                        </th>
+                    </tr>
+    
+                </thead >
+                <tbody id="body"  >
+                    <th ></th>
+                </tbody>
+    
+            </table>
+            <!-- <h1>translations</h1> -->
+            <table id="ka4" align="center" style="background-color: rgb(62, 40, 11); color: azure; ">
+                <thead id="thead1">
+                    <tr>
+                        <th>
+                            translations
+                        </th>
+                        <th>official</th>
+                        <th>common</th>
+                    </tr>
+                </thead>
+                <tbody id="body1">
+    
+                </tbody>
+    
+    
+    
+            </table></div>
+
+       
+    </div>
+    <script>
+
+        p1_get = document.getElementById("count1")
+        q=document.getElementById("countrydetails")
+
+        int1_get = document.getElementById("no1")
+        int2_get = document.getElementById("no2")
+        int3_get = document.getElementById("no3")
+        int4_get = document.getElementById("no4")
+        int5_get=document.getElementById("int5")
+
+        p1_get.addEventListener("click", () => {
+            int1_get.style.display = "block"
+
+            
+            int2_get.style.display = "none"
+            int3_get.style.display = "none"
+            int4_get.style.display = "none"
+            int5_get.style.display = "block"
+            q.style.display="none"
+           
+        })
+
+
+        p3_get = document.getElementById("count3")
+        p3_get.addEventListener("click", () => {
+
+            int1_get.style.display = "none"
+            int2_get.style.display = "none"
+            int3_get.style.display = "block"
+            int3_get.style.textDecoration = "underline"
+            int4_get.style.display = "none"
+            int5_get.style.display = "none"
+            q.style.display="none"
+  
+
+        })
+        p4_get = document.getElementById("count4")
+        p4_get.addEventListener("click", () => {
+
+            int1_get.style.display = "none"
+            int2_get.style.display = "none"
+            int3_get.style.display = "none"
+            int4_get.style.display = "block"
+            int4_get.style.textDecoration = "underline";
+            int5_get.style.display = "none"
+            q.style.display="none"
+
+
+        })
+
+  
+
+
+
+
+
+
+
+
+
+        p2_get = document.getElementById("count2")
+        // div_get1 = document.getElementById("countrydetails")
+
+        p2_get.addEventListener("click", () => {
+
+            int1_get.style.display = "none"
+            int2_get.style.display = "block"
+            int2_get.style.textDecoration = "underline"
+            int3_get.style.display = "none"
+            int4_get.style.display = "none"
+            int5_get.style.display = "none"
+            q.style.display="block"
+
+
+        })
+        btn = document.getElementById("ka1")
+        inp = document.getElementById("int2")
+        thead = document.getElementById("thead")
+        tbody = document.getElementById("tbody")
+        tr_cre = document.createElement("tr")
+        th_cre = document.createElement("td")
+        th2_cre = document.createElement("td")
+        th3_cre = document.createElement("td")
+        th4_cre = document.createElement("td")
+        th5_cre = document.createElement("td")
+        th6_cre = document.createElement("td")
+        di = document.getElementById("ka3")
+        img3 = document.createElement("img")
+        table = document.getElementById("ka4")
+        thead1 = document.getElementById("thead1")
+        tbody2 = document.getElementById("body1")
+        btn.addEventListener("click", () => {
+            country = inp.value
+            // console.log(country)
+            let d = `https://restcountries.com/v3.1/name/${country}?fullText=true`
+            // console.log(d)
+            fetch(d)
+                .then(rep => rep.json())
+                .then(data => {
+                    console.log(d)
+
+                    th_cre.innerText = data[0]["area"]
+                    th2_cre.innerText = data[0]["region"]
+                    th3_cre.innerText = data[0]["capital"][0]
+                    th4_cre.innerText = country
+                    img3.src = data[0]["flags"]["svg"]
+                    img3.style.width = "80px"
+                    th5_cre.appendChild(img3);
+                    th6_cre.innerText = data[0]["population"]
+
+                    tr_cre.append(th4_cre, th_cre, th2_cre, th3_cre, th5_cre, th6_cre)
+                    thead.append(tr_cre)
+                    di.style.display = "block"
+                    table.style.display = "block"
+
+
+                    for (var i in data[0]) {
+                        // console.log(i)
+                        if (i == "translations") {
+                            for (var j in data[0][i]) {
+                                tr_cre1 = document.createElement("tr")
+                                th_cre1 = document.createElement("td")
+                                th_cre2 = document.createElement("td")
+                                th_cre3 = document.createElement("td")
+
+                                th_cre1.innerText = j
+                                th_cre2.innerText = data[0][i][j]["official"]
+                                th_cre3.innerText = data[0][i][j]["common"]
+                                tr_cre1.append(th_cre1, th_cre2, th_cre3)
+
+                                tbody2.append(tr_cre1)
+                            }
+
+                        }
+
+                    }
+                })
+        })
+
+        btn2 = document.getElementById("ka2")
+
+        btn2.addEventListener("click", () => {
+            location.reload()
+        
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>

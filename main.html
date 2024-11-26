@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url("https://fonts.googleapis.com/css?family=Titillium+Web");
+
+        * {
+            font-family: "Titillium Web", sans-serif;
+        }
+
+        body {
+            height: 2000px;
+        }
+
+        .navbar .navbar-brand {
+            font-size: 30px;
+        }
+        .navbar .nav-item {
+            padding-left: 5px;
+        }
+        .navbar .nav-link {
+            font-size: 20px;
+        }
+
+        .fa-bars {
+            color: #cedbe4;
+            font-size: 30px;
+        }
+
+        .navbar {
+            background-color: #140347 !important;
+            position: sticky !important;
+            top: 0px !important;
+            opacity: 0.9 !important;
+
+        }
+        #nav {
+            color: azure;
+
+        }
+
+        #home {
+            background-image: url(./b12.jpg);
+            background-size: 100% 100%;
+            width: 100%;
+            height: 33%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home1 {
+            background-color: rgba(9, 9, 34, 0.768);
+            color: azure;
+            width: 40%;
+            padding: 2%;
+            text-align: center;
+            border-radius: 2%;
+
+        }
+        #homeb {
+            background-color: rgb(82, 96, 228);
+            color: azure;
+            border-radius: 10%;
+            margin: 2%;
+            height: 40px;
+            width: 100px;
+        }
+        #services {
+            background-color: #20124e;
+            background-size: 100% 100%;
+            width: 100%;
+            /* height: 100%; */
+        }
+
+        #servicesh {
+            color: azure;
+            text-align: center;
+            padding-top: 2%;
+        }
+
+        #row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 40px;
+            width: 100%;
+        }
+
+        #cards {
+            width: 300px;
+            height: 350px;
+            padding-top: 2%;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: #20124e;
+            border-radius: 10px;
+            box-shadow: 5px 5px 20px black;
+            margin-bottom: 5%;
+            margin-top: 3%;
+        }
+
+        #cards:hover {
+            transform: scale(1.1, 1.1);
+            transition: all 1s ease;
+        }
+
+        #sh {
+            color: azure;
+            text-align: center;
+            margin-bottom: 6%;
+        }
+
+        #about {
+            background-color: #20124e;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #abouts {
+            background-color: #f9f9f9;
+            border-radius: 5px;
+            padding: 20px;
+            margin-top: 20px;
+            text-align: center;
+
+        }
+
+        #imgs {
+            width: 300px;
+            height: 300px;
+            border-radius: 5%;
+        }
+
+        #imgs:hover {
+            transform: scale(1.05, 1.05);
+            transition: all 1s ease-out;
+        }
+
+        #gallary {
+            background-color: #20124e;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+        }
+
+        #gallaryd {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            column-gap: 30px;
+            row-gap: 50px;
+        }
+
+        #packages {
+            background-color: #20124e;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 30px;
+            align-items: center;
+
+        }
+
+        #pcards {
+            display: flex;
+            column-gap: 20px;
+            flex-wrap: wrap;
+            justify-content: center;
+            row-gap: 30px;
+        }
+
+        #cardp {
+            width: 300px;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid black;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #cardp:hover {
+            transform: scale(1.05, 1.05);
+            transition: all 1s ease-out;
+        }
+
+        /* #star{
+            color: orange;
+        } */
+        #book {
+            background-color: #20124e;
+            padding-top: 50px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            padding-top: 8%;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        #books {
+            display: flex;
+            flex-direction: column;
+            row-gap: 15px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #m {
+            display: flex;
+            flex-direction: column;
+            row-gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        label {
+            color: azure;
+            display: inline-block;
+            margin-top: 1.5rem;
+            /* border-radius: 2%;/ */
+        }
+
+        #review {
+            background-color: #20124e;
+            display: flex;
+            
+              flex-direction: column;
+         padding-top: 8%;
+            row-gap: 30px;
+            justify-content: center;
+            align-items: center;
+        }
+        #maincard{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 50px;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #ccard {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 300px;
+            border: 1px solid black;
+            padding: 10px;
+            row-gap: 10px;
+            border-radius: 10px;
+            background-color: white;
+        }
+        #get{
+            background-color: #20124e;
+            display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    flex-wrap: wrap;
+  padding-top: 8%;
+  padding-bottom: 8%;
+
+
+        }
+        #gets{
+            width: 400px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    color: azure;
+        }
+        #getss{
+            display: flex;
+    flex-direction: column;
+    row-gap: 15px;
+    justify-content: center;
+    align-items: center;
+
+        }
+        #footer{
+            display: flex;
+    justify-content: space-evenly;
+    background-color: #160742;
+    border-top: 2px solid white;
+
+        }
+        #footers{
+            display: flex;
+    flex-direction: column;
+    width: 400px;
+    row-gap: 5px;
+   color: azure;
+   margin-top: 2%;
+   
+
+        }
+        #footeri{
+            display: flex;
+            flex-direction: row;
+            gap: 2%;
+        }
+    </style>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</head>
+</head>
+
+<body>
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light btn-light">
+
+        <div class="container">
+            <a class="navbar-brand" href="#"><img src="./logo.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fas fa-bars"></i>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto w-100 justify-content-end">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#home" id="nav">Home <span
+                                class="sr-only">(current)</span></a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" id="nav">Services</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" id="nav">About</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#packages" id="nav">Packages</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./country.html" id="nav" target="_top">Country info</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#book" id="nav">Book</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#review" id="nav">Reviews</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#get" id="nav">Contact</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="./adminlogin.html" id="nav">Admin Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="" id="nav">
+                            <span><img src="./user-search-alt-1-svgrepo-com.png" width="30px" alt="">Guest</span></a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div id="home">
+
+        <div id="home1">
+            <h1>Travel The World & Explore The New Destination</h1>
+            <h5 style="margin: 2%;">Welcome to our travel info. Explore new destinations and plan your next adventure
+                us!</h5>
+            <a href="#packages"><button id="homeb">Packages</button></a>
+
+        </div>
+
+
+    </div>
+    <div id="services">
+        <h1 id="servicesh">Services</h1>
+        <div id="row">
+            <div id="cards">
+                <h1 id="sh"><i class="fas fa-globe-asia"></i></h1>
+                <h2 id="sh">
+                    <h2 id="sh">Around The World</h2>
+                    <h5 id="sh">Discover our global travel packages and explore the World's most fascinating
+                        destinations.
+                    </h5>
+            </div>
+            <div id="cards">
+                <h1 id="sh"><i class="fas fa-plane"></i></h1>
+                <h2 id="sh">Fastest Travel</h2>
+                <h5 id="sh">Experirncr the fastest and most convenient travel options with our exclusive travel
+                    services.</h5>
+            </div>
+            <div id="cards">
+                <h1 id="sh"><i class="fas fa-hotel"></i></h1>
+                <h2 id="sh"> Affordable Hotels </h2>
+                <h5 id="sh">Find the best deals on comfortable and affordable accommodations for your trip</h5>
+            </div>
+            <div id="cards">
+                <h1 id="sh"><i class="fas fa-bullhorn"></i></h1>
+                <h2 id="sh">Safty Guide</h2>
+                <h5 id="sh">Stay safe during your travels with our comprehensive safety tips and guidelines.</h5>
+            </div>
+        </div>
+    </div>
+
+    <div id="about">
+        <div id="row">
+            <div><img src="./b2.png" alt="" width="100%" height="auto"></div>
+
+
+            <div id="abouts">
+                <h1>About Us</h1>
+                <h3>How work This Travel info</h3>
+                <h6>Learn about our travel information services and how we can help you plan your dream vacation</h6>
+                <button id="homeb">Read More</button>
+            </div>
+        </div>
+
+    </div>
+    <div id="gallary">
+        <h1 style="color: azure;">Our Gallary <span><img src="./down-arrow-alt-svgrepo-com.png" alt=""
+                    width="60px"></span> </h1>
+        <div id="gallaryd">
+            <img src="./one-day-hyderabad-local-sightseeing-tour-package-private-cab-header.webp" alt="" id="imgs">
+            <img src="./20-Facts-About-Bangalore-Students-Should-Know.webp" alt="" id="imgs">
+            <img src="./cities-in-america.jpg" alt="" id="imgs">
+            <img src="./download.jpeg" alt="" id="imgs">
+            <img src="./shutterstock_1923669935-2048x1167.jpg" alt="" id="imgs">
+            <img src="./mumbai-belongs-to-india-2020-09-22.jpg" alt="" id="imgs">
+        </div>
+
+    </div>
+
+
+    <div id="packages">
+        <h1 style="color: azure;">Packages</h1>
+        <div id="pcards">
+            <div id="cardp">
+                <img src="./cities-in-america.jpg" alt="" width="300px">
+                <h3 style="padding: 4%;">America</h3>
+                <p style="padding: 4%;">Explore the diverse landscapes and vibrant cities of the United States. From the
+                    bustling streets of
+                    New York City to the breathtaking beauty of the Grand Canyon, there's something for everyone in the
+                    USA.</p>
+                <!-- <i class="fa-solid fa-star checked" id="star">s</i> -->
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+
+            </div>
+            <div id="cardp"><img src="./china.jpg" alt="" width="300px">
+                <h3 style="padding: 4%;">china</h3>
+                <p style="padding: 4%;">Experience the rich history and culture of China. Visit iconic landmarks such as
+                    the Great Wall and
+                    the Forbidden City, Imperial Palace, The Summer Palace, and sample delicious Chinese cuisine.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+            <div id="cardp"><img src="./greece.webp" alt="" width="300px">
+                <h3 style="padding: 4%;">Greece</h3>
+                <p style="padding: 4%;">Immerse yourself in the ancient history and stunning landscapes of Greece.
+                    Explore the ruins of
+                    Athens, relax on the beautiful beaches of the Greek Islands, and indulge in delicious Mediterranean
+                    cuisine.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+            <div id="cardp"><img src="./itely.jpg" alt="" width="300px">
+                <h3 style="padding: 4%;">Itely</h3>
+                <p style="padding: 4%;">Discover the art, culture, and cuisine of Italy. Visit historic cities such as
+                    Rome, Florence, and
+                    Venice, and sample world-renowned Italian dishes like pasta and gelato.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+            <div id="cardp"><img src="./download.jpeg" alt="" width="300px">
+                <h3 style="padding: 4%;">France</h3>
+                <p style="padding: 4%;">Experience the romance and charm of France. Explore the iconic landmarks of
+                    Paris, such as the Eiffel
+                    Tower and the Louvre, and indulge in French cuisine and wine.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+            <div id="cardp"><img src="./jorden.webp" alt="" width="300px">
+                <h3 style="padding: 4%;">Jorden</h3>
+                <p style="padding: 4%;">Explore the ancient wonders of Jordan. Visit the rock-cut city of Petra, float
+                    in the Dead Sea,
+                    explore the desert landscapes of Wadi Rum, Ajloun Castle, Karak Castle and Dana Nature Reserve.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+
+            </div>
+            <div id="cardp"><img src="./mexico-city.avif" alt="" width="300px">
+                <h3 style="padding: 4%;">Mexico</h3>
+                <p style="padding: 4%;">Experience the vibrant culture and rich history of Mexico. Visit ancient Mayan
+                    ruins, relax on the
+                    beautiful beaches of Cancun, and sample delicious Mexican cuisine.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+            <div id="cardp"><img src="./spain.jpg" alt="" width="300px">
+                <h3 style="padding: 4%;">Spain</h3>
+                <p style="padding: 4%;">Discover the vibrant culture and stunning architecture of Spain. Visit historic
+                    cities such as
+                    Barcelona and Madrid, explore beautiful beaches, and enjoy delicious Spanish tapas.</p>
+                <h4 style="padding: 4%;">Price$999</h4>
+                <button id="homeb" style="padding: 4%;">Book Now</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="book">
+
+        <div><img src="./book-img.png" alt="" width="100%" height="auto"></div>
+        <div id="books">
+            <form action="">
+                <h3 style="color: azure;">BOOK YOUR DESTINATION</h3>
+                <div id="m"> <label for="">Name</label>
+                    <input type="text" name="" id="b1" placeholder="Enter Your Name" tel>
+                </div>
+                <div id="m"><label for="">Phone Number</label>
+                    <input type="tel" name="" id="b2" placeholder="Enter Your Phone  Number">
+                </div>
+                <div id="m">
+                    <label for="">Destination Place</label>
+                    <input type="text" id="b3" placeholder="Enter Your Destination Place">
+                </div>
+                <div id="m"><label for="">How many</label> 
+                    <input type="text" name="" id="b4" placeholder="How many">
+                </div>
+
+                <div id="m"><label for="">Start date</label><input type="date" name="" id="b5" placeholder="DD--MM--YYY">
+                </div>
+
+                <div id="m"><label for="">End date</label><input type="date" name="" id="b6" placeholder="DD--MM--YYY">
+                </div>
+                <div id="m">
+                    <label for="">Members Name</label><textarea name="info" id="b7" cols="50" rows="10"
+                        placeholder="Enter Members Name &amp; details" required=""></textarea>
+                </div>
+                <br>
+                <div id="m">
+                    <button id="b8">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <div id="review">
+        <h1 style="color: azure;">What Customers Say</h1>
+        <div id="maincard">
+            <div id="ccard"> 
+                <img src="./nithin.jpg" alt="" width="90px" style="border-radius: 50%;">
+                <h3>Nithin</h3>
+                <p>Great service! I had an amazing experience traveling with Travel Info. Highly recommended!</p>
+            </div>
+            <div id="ccard">
+                <img src="./ganesh.jpg" alt="" width="90px" style="border-radius: 50%;">
+                <h3>Ganesh</h3>
+                <p>Travel Info made my trip hassle-free! From booking to accommodations, everything was well-organized.
+                </p>
+            </div>
+            <div id="ccard">
+                <img src="./rohini.png" alt="" width="90px" style="border-radius: 50%;">
+                <h3>ROHINI</h3>
+                <p>Good service and friendly staff. I had a memorable vacation thanks to Travel Info's recommendations.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div id="get">
+        <div id="gets">
+            <h1>Get in Touch</h1>
+            <p>Contact us for any inquiries or assistance. We're here to help you plan your perfect vacation!</p>
+            <p>+91600000000</p>
+            <p>Example@gmail.com</p>
+            <p>Hyderabad,india</p>
+        </div>
+        <form id="getss">
+            <input type="text" name="" id="get1" placeholder="Name">
+            <input type="text" name="" id="get2" placeholder="Mobile">
+            <input type="email" placeholder="Email" id="get3">
+            <textarea name="" id="get4" placeholder="Message" ></textarea>
+            <button id="get5">Send Me</button>
+        </form>
+    </div>
+
+
+    <footer id="footer">
+        <div id="footers">
+            <h3>Travel info</h3>
+            <p>Welcome to Travel Info, your go-to source for all your travel needs. Whether you're looking for
+                exciting vacation packages, reliable travel services, or helpful travel tips, we've got you covered.
+                Plan your next adventure with us!</p>
+                <div id="footeri"><span><i class="bi-instagram"></i></span>
+                    <span><i class="bi-facebook"></i></span>
+                    <span><i class="bi-x"></i></span>
+                    <span><i class="bi-youtube"></i></span></div>
+                
+        </div>
+        <div id="footers">
+            <h3>Usefll links</h3>
+            <p>Home</p>
+            <p>About Us</p>
+            <P>Packages</P>
+            <p>Book</p>
+            <p>Country</p>
+            <p>Contact Us</p>
+        </div>
+        <div id="footers">
+            <h3>Other Links</h3>
+            <p>terms & Conditions</p>
+            <p>Privacy policy</p>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script>
+        btn_get=document.getElementById("get5")
+        a=[]
+        btn_get.addEventListener("click",(e)=>{
+            e.preventDefault()
+            int1_get=document.getElementById("get1").value
+            int2_get=document.getElementById("get2").value
+            int3_get=document.getElementById("get3").value
+            int4_get=document.getElementById("get4").value
+            
+            obj={
+                name:int1_get,
+                mobile:int2_get,
+                email:int3_get,
+                textarea:int4_get
+            }
+            a.push(obj)
+            // console.log(a)
+            window.localStorage.setItem("get",JSON.stringify(a))
+        })
+
+        btnb_get=document.getElementById("b8")
+        b=[]
+        btnb_get.addEventListener("click",(e)=>{
+            e.preventDefault()
+            intb1_get=document.getElementById("b1").value
+            intb2_get=document.getElementById("b2").value
+            intb3_get=document.getElementById("b3").value
+            intb4_get=document.getElementById("b4").value
+            intb5_get=document.getElementById("b5").value
+            intb6_get=document.getElementById("b6").value
+            intb7_get=document.getElementById("b7").value
+            
+            ka={
+                name:intb1_get,
+                mobile:intb2_get,
+                where:intb3_get,
+                members:intb4_get,
+                start:intb5_get,
+                end:intb6_get,
+                members:intb7_get
+            }
+            b.push(ka)
+            // console.log(b)
+            
+            window.localStorage.setItem("book",JSON.stringify(b))
+        })
+
+
+    </script>
+</body>
+
+</html>

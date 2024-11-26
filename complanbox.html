@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #20124e;
+        }
+        #k{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ka{
+            background-color: #147ee0;
+            color: azure;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+            
+            
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="k">
+        <h1 style="color: azure;" align="center">Complaints Details</h1>
+    <table  >
+        <thead id="thead">
+            <tr >
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    </div>
+    
+    
+    <script>
+       var data=localStorage.getItem("get")
+       data1=JSON.parse(data)       
+       var thead=document.getElementById("thead")
+       var tbody=document.getElementById("tbody")
+       tr_get=document.createElement("tr")
+console.log(data1)
+       data1[0]
+
+       for(i in data1[0]){
+        
+
+        th_get=document.createElement("th")
+        th_get.innerText=i
+        th_get.id="ka"
+     
+        
+        tr_get.append(th_get)
+       }
+       thead.append(tr_get)
+       for(i=0;i<data1.length;i++){
+           tr2_cre=document.createElement("tr")
+           
+           for(j in data1[i]){
+
+               td_cre=document.createElement("td") 
+               td_cre.innerText=data1[i][j]
+               
+        td_cre.id="ka"
+        td_cre.style.diplay="flex"
+        td_cre.style.justifyContent = "center";
+        td_cre.style.alignItems = "center";
+        
+               tr2_cre.append(td_cre)
+            }
+            tbody.append(tr2_cre)
+       }
+    </script>
+</body>
+</html>

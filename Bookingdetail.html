@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-color: #20124e;
+        }
+        #k{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+        }
+        #ka{
+            background-color: #147ee0;
+            color: azure;
+            width: 200px;
+            height: 40px;
+            text-align: center;
+
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="k">
+        <h1 style="color: azure;" align="center">Booking Details</h1>
+    <table  >
+        <thead id="thead">
+            <tr >
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+    </div>
+    <script>
+        data=window.localStorage.getItem("book")
+        data1=JSON.parse(data)
+        // console.log(data1)
+        data1[0]
+        thead=document.getElementById("thead")
+        tbody=document.getElementById("tbody")
+
+        tr_cre=document.createElement("tr")
+        for(key in data1[0]){
+            th_cre=document.createElement("th")
+            th_cre.id="ka"
+            th_cre.innerText=key
+            tr_cre.append(th_cre)
+            // console.log(key)
+        }
+        thead.append(tr_cre)
+
+        for(i in data1){
+            tr1_cre=document.createElement("tr")
+        
+            for(j in data1[i]){
+               console.log(data1[i][j])
+               td_cre=document.createElement("td")
+               td_cre.id="ka"
+               td_cre.innerText=data1[i][j]
+               tr1_cre.append(td_cre)
+
+            }
+            tbody.append(tr1_cre)
+            
+        }       
+    </script>
+</body>
+</html>

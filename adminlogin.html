@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            background-image: url(./adminlogin.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 70vh;
+        }
+        #l{
+            background-color: rgba(12, 49, 55, 0.649);
+            width: 300px;
+            height: 300px; 
+            text-align: center;
+             margin: auto; 
+             padding: 20px;
+             margin-top: 200px;
+            border-radius: 10%;
+            backdrop-filter: blur(10px);
+           
+        }
+        input{
+            height: 30px;
+            border-radius: 10px;
+            font-size: 15px;
+            font-weight: bold;
+        }
+        
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <div id="l">
+        <form action="">
+            <h1 style="color: azure;">Admin Login</h1>
+            <input type="text" placeholder="Email" id="k">
+            <br><br>
+            <input type="password" placeholder="Password" id="k1"><br><br>
+            <input type="button" value="submit" id="k2"><br><br>
+            <span style="color: azure;">Login as <a href="./adminusers.html" style="color: azure;">Guest</a></span>
+        </form>
+    </div>
+
+    <script>
+        a=[]
+        obj={
+            email:"surarohini74@gmail.com",
+            password:"Rohi@123"
+        }
+        a.push(obj)
+        localStorage.setItem("admin",JSON.stringify(a))
+        data=localStorage.getItem("admin")
+        data1=JSON.parse(data)
+
+        btn=document.getElementById("k2")
+        btn.addEventListener("click",()=>{
+            int1=document.getElementById("k").value
+            int2=document.getElementById("k1").value
+            for(i=0;i<a.length;i++){
+                for(j=0;j<data1.length;j++){
+
+                    console.log(data1[0].email,data1[0].password)
+                    console.log(int1,int2)
+                    if(data1[0].email==int1 && data1[0].password==int2 ){
+                        window.location.assign("adminusers.html")
+                    }else{
+                        alert("Enter the correct details of admin")
+                    }
+                }
+            }
+
+        })
+
+    </script>
+   
+</body>
+</html>
