@@ -28,19 +28,34 @@
         }
 
         .fa-bars {
-            color: #cedbe4;
+            color: #f0f4f6;
             font-size: 30px;
         }
+        .navbar .nav-link {
+    font-size: 18px;
+    color: white !important;
+    background-color: #302072;    /* Added background color */
+    border-radius: 8px;           /* Rounded corners */
+    margin: 0 5px;                /* Small spacing between buttons */
+    padding: 5px 12px;            /* Padding inside buttons */
+    transition: 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background-color: #f9c80e;     /* Gold on hover */
+    color: #140347 !important;     /* Dark text on hover */
+}
+
 
         .navbar {
-            background-color: #140347 !important;
+            background-color: #f2f2f2 !important;
             position: sticky !important;
             top: 0px !important;
             opacity: 0.9 !important;
 
         }
         #nav {
-            color: azure;
+            color: rgb(8, 8, 8);
 
         }
 
@@ -120,7 +135,7 @@
         }
 
         #about {
-            background-color: #20124e;
+            background-color: #2a1a68;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -130,7 +145,7 @@
         }
 
         #abouts {
-            background-color: #f9f9f9;
+            background-color: #2a1a68;
             border-radius: 5px;
             padding: 20px;
             margin-top: 20px;
@@ -141,7 +156,7 @@
         #imgs {
             width: 300px;
             height: 250px;
-            border-radius: 5%;
+            border-radius: 8%;
         }
 
         #imgs:hover {
@@ -164,6 +179,7 @@
             justify-content: space-evenly;
             column-gap: 30px;
             row-gap: 50px;
+            
         }
 
         #packages {
@@ -173,6 +189,7 @@
             flex-direction: column;
             row-gap: 30px;
             align-items: center;
+            /* border-radius: 20px; */
 
         }
 
@@ -182,8 +199,104 @@
             flex-wrap: wrap;
             justify-content: center;
             row-gap: 30px;
-            border-radius: 10px;
+            border-radius: 50px;
         }
+        #cardp {
+    width: 260px; /* Slightly smaller width */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;        /* Rounded corners */
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);  /* Soft shadow */
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cardp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);  /* Stronger shadow on hover */
+}
+#pcards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* spacing between cards */
+}
+
+#cardp {
+    width: 260px; 
+    min-height: 480px;   /* Fixed height for equal-sized cards */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 12px;
+    background-color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cardp:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+#cardp img {
+    width: 100%;
+    height: 160px; /* Force all images to the same height */
+    object-fit: cover; /* Crops images nicely to fit */
+}
+
+#cardp h3, #cardp p, #cardp h4, #cardp button {
+    padding: 0 10px;
+}
+#row {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;  /* So they can stack on smaller screens */
+    gap: 20px;
+    margin: 0 auto;
+    max-width: 1200px; /* Keeps layout centered */
+}
+
+#cards {
+    flex: 1 1 22%;       /* Forces 4 in a row when there's space */
+    min-width: 220px;    /* Minimum size for responsiveness */
+    max-width: 250px;    /* Keep size controlled */
+    height: 300px;       /* Slightly smaller height */
+    background-color: #2a1a68;
+    color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#cards:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.5);
+}
+
+#sh {
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    #cards {
+        flex: 1 1 45%;  /* 2 per row on tablets */
+    }
+}
+
+@media (max-width: 500px) {
+    #cards {
+        flex: 1 1 90%;  /* Stack 1 per row on mobile */
+    }
+}
+
+
 
         #cardp {
             width: 300px;
@@ -193,7 +306,7 @@
             justify-content: space-between;
             border: 1px solid black;
             border-radius: 10px;
-            background-color: white;
+            background-color: rgb(210, 185, 139);
         }
 
         #cardp:hover {
@@ -278,9 +391,7 @@
     flex-wrap: wrap;
   padding-top: 8%;
   padding-bottom: 8%;
-
-
-        }
+        } 
         #gets{
             width: 400px;
     display: flex;
@@ -418,7 +529,7 @@
             <div><img src="./b2.png" alt="" width="100%" height="auto"></div>
 
 
-            <div id="abouts">
+            <div style="color: white;" id="abouts">
                 <h1>About Us</h1>
                 <h3>How work This Travel info</h3>
                 <h6>Learn about our travel information services and how we can help you plan your dream vacation</h6>
@@ -428,7 +539,7 @@
 
     </div>
     <div id="gallary">
-        <h1 style="color: azure;">Our Gallary <span><img src="./down-arrow-alt-svgrepo-com.png" alt=""
+        <h1 style="color: rgb(254, 255, 255);">Our Gallary <span><img src="./down-arrow-alt-svgrepo-com.png" alt=""
                     width="60px"></span> </h1>
         <div id="gallaryd">
             <img src="./one-day-hyderabad-local-sightseeing-tour-package-private-cab-header.webp" alt="" id="imgs">
@@ -572,8 +683,8 @@
                 </p>
             </div>
             <div id="ccard">
-                <img src="./rohini.png" alt="" width="90px" style="border-radius: 50%;">
-                <h3>ROHINI</h3>
+                <img src="./IMG_0884.JPG 2.JPG" alt="" height="90px" width="90px" style="border-radius: 50%;">
+                <h3>VICKY</h3>
                 <p>Good service and friendly staff. I had a memorable vacation thanks to Travel Info's recommendations.
                 </p>
             </div>
